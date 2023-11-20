@@ -1,0 +1,34 @@
+{
+  "name": "typescript-utilities",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/typescript-utilities/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "outputPath": "{projectRoot}/dist",
+        "main": "libs/typescript-utilities/src/index.ts",
+        "tsConfig": "libs/typescript-utilities/tsconfig.lib.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/typescript-utilities/**/*.{ts,tsx,js,jsx}"],
+        "fix": true
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/typescript-utilities",
+        "commands": ["tsc -p tsconfig.json --noEmit"],
+        "forwardAllArgs": false
+      }
+    }
+  },
+  "tags": []
+}

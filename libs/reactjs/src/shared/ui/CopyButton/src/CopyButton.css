@@ -1,0 +1,21 @@
+.CopyButton__container {
+  box-sizing: border-box !important;
+  padding: 8px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  border: 1px solid !important;
+  border-radius: 6px !important;
+  appearance: none !important;
+  color: #24292f !important;
+  background-color: #f6f8fa !important;
+  border-color: rgba(31, 35, 40, 0.15) !important;
+  box-shadow: 0 1px 0 rgba(31, 35, 40, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.CopyButton__text {
+  margin-left: 4px !important;
+}
